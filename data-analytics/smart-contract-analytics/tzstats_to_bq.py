@@ -29,7 +29,7 @@ def collect_api_response():
     return data
         
 #reformatting json data to a table friendly view
-def clean_data(json_data): #reformats and unnest data to a wide format
+def clean_data(json_data): #reformats and unnests data to a wide format
     df = pd.json_normalize(json_data)
     df.columns = df.columns.str.replace(".", "_")
     df['time'] =  pd.to_datetime(df['time']) #reformatting to date time for time series graphs
@@ -37,7 +37,7 @@ def clean_data(json_data): #reformats and unnest data to a wide format
 
 #uploading to bigquery
 def bq_upload(dataframe):
-    dataframe.to_gbq('smartcon_test.example',if_exists='replace') #set to replace to refresh new data. when data gets too big, better to append instead
+    dataframe.to_gbq('your data set id and table name',if_exists='replace') #set to replace to refresh new data. when data gets too big, better to append instead
 
 #tie the code together
 def full_code():
