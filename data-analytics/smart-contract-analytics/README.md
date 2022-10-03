@@ -10,9 +10,9 @@ In this tutorial, I will guide you through:
 
 There are things that you need to have installed in your local machine before we could utilise the script. To prevent this from becoming too long, I've attached links to articles below. It should help you prep the environment needed to get this going.
 
-1. Download files from this repo [click here](https://www.toolsqa.com/git/difference-between-git-clone-and-git-fork/#:~:text=When%20you%20fork%20a%20repository,with%20the%20help%20of%20Git.)
-2. Install Python [click here](https://medium.com/bb-tutorials-and-thoughts/how-to-install-and-getting-started-with-python-acf369e4cf80)
-3. Download the required packages [click here](https://medium.com/digital-biomarker-discovery/managing-python-packages-using-the-requirements-txt-file-e2f0e35b1cf6)
+⋅⋅* Download files from this repo [click here](https://www.toolsqa.com/git/difference-between-git-clone-and-git-fork/#:~:text=When%20you%20fork%20a%20repository,with%20the%20help%20of%20Git.)
+⋅⋅* Install Python [click here](https://medium.com/bb-tutorials-and-thoughts/how-to-install-and-getting-started-with-python-acf369e4cf80)
+⋅⋅* Download the required packages [click here](https://medium.com/digital-biomarker-discovery/managing-python-packages-using-the-requirements-txt-file-e2f0e35b1cf6)
 
 Phew, that was a long one. now to setup your BigQuery.
 
@@ -25,6 +25,8 @@ Proceed [here](https://cloud.google.com/bigquery) to start!
 Fill up your details and payment method (don't worry, they won't actually charge you until you've activated). Proceed with `START MY FREE TRIAL`. They will prompt you with surverys and tutorials, but you can skip it if you don't want to. 
 
 Congrats! you are can now utilise BigQuery free trial! You can consider activating it, since the costs for storage are relatively low (it won't break your bank). There are other tools that you can utilise as well. But for simplicity, I'll only be going through GCP's BigQuery. 
+
+____________________
 
 Next, let's create a service account for us to utilise the BigQuery API. This will allow us to authenticate access from our local machine.
 
@@ -66,6 +68,7 @@ Grant Access right to your project. Ideally, you would want it limited to only r
 
 This will automatically download the json credentials to your Downloads Folder.
 
+____________________
 
 ### Create a dataset to load data into! Click [here](https://console.cloud.google.com/bigquery) to go to your project! Click on the options next to your project then `Create dataset`.
 
@@ -78,6 +81,8 @@ Name your dataset and set the location to store the data. I've selected Singapor
 
 
 Take not of the `project id` and the `dataset id`, you will need it later.
+
+____________________
 
 Now now, let's put it all together into the script! Open `tzstats_to_bq.py` and plug in the credentials!
 
@@ -94,8 +99,9 @@ dataframe.to_gbq('your dataset id and table name',if_exists='replace')
 ```
 Note: for dataset id and table name should be in this format `smart_contract_test.table1`
 
+____________________
 
-Woot woot! We have now successfully fill it up. You can fire it up from your IDE or even your terminal to execute it!
+Woot woot! We have now finished our setup. You can fire it up from your IDE or even your terminal to begine collecting data!
 
 
 A summary of what the script does, it's using an API endpoint from [tzstats](https://tzstats.com/) then uploading it to Google BigQuery. This is a free tool that we could use to extract data. If you are keen to explore more endpoints, refer to their API documentation [here](https://tzstats.com/docs/api#tezos-api). You could edit the endpoint easily and extract other data out as well!
