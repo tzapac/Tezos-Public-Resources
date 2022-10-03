@@ -10,9 +10,9 @@ In this tutorial, I will guide you through:
 
 There are things that you need to have installed in your local machine before we could utilise the script. To prevent this from becoming too long, I've attached links to articles below. It should help you prep the environment needed to get this going.
 
-⋅⋅* Download files from this repo [click here](https://www.toolsqa.com/git/difference-between-git-clone-and-git-fork/#:~:text=When%20you%20fork%20a%20repository,with%20the%20help%20of%20Git.)
-⋅⋅* Install Python [click here](https://medium.com/bb-tutorials-and-thoughts/how-to-install-and-getting-started-with-python-acf369e4cf80)
-⋅⋅* Download the required packages [click here](https://medium.com/digital-biomarker-discovery/managing-python-packages-using-the-requirements-txt-file-e2f0e35b1cf6)
++ Download files from this repo [click here](https://www.toolsqa.com/git/difference-between-git-clone-and-git-fork/#:~:text=When%20you%20fork%20a%20repository,with%20the%20help%20of%20Git.)
++ Install Python [click here](https://medium.com/bb-tutorials-and-thoughts/how-to-install-and-getting-started-with-python-acf369e4cf80)
++ Download the required packages [click here](https://medium.com/digital-biomarker-discovery/managing-python-packages-using-the-requirements-txt-file-e2f0e35b1cf6)
 
 Phew, that was a long one. now to setup your BigQuery.
 
