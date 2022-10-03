@@ -87,7 +87,7 @@ ____________________
 Now now, let's put it all together into the script! Open `tzstats_to_bq.py` and plug in the credentials!
 
 ```python
-address = 'your smart contract address here
+address = 'your smart contract address here'
 
 credentials = service_account.Credentials.from_service_account_file(
     'your json file location here',
