@@ -6,7 +6,7 @@ from google.oauth2 import service_account
 import pandas_gbq
 
 address = '<insert smart contract address>'
-url = "https://api.tzstats.com/explorer/contract/"+address+"/calls?meta=1"
+url = "https://api.tzstats.com/explorer/contract/"+address+"/calls?meta=1&offset=0&limit=500"
 
 credentials = service_account.Credentials.from_service_account_file(
     '<insert json cred>',
