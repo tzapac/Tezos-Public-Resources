@@ -53,7 +53,7 @@ def full_code():
             jsondata = collect_api_response()
             
         else:
-            assert 5+5=11 #forces script to throw an error and stop
+            assert 5+5==11 #forces script to throw an error and stop
     
     clean_df = clean_data(jsondata)
     bq_upload(clean_df)
